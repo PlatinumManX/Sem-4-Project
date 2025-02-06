@@ -1,0 +1,221 @@
+/* General reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body covers full height */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Top Navbar (with phone and email) */
+.top-navbar {
+    background-color: rgb(8, 29, 69);
+    color: white;
+    text-align: end;
+    padding: 3px 20px;
+}
+
+.top-navbar .contact-info p {
+    margin: 5px;
+    font-size: 14px;
+    display: inline;
+    margin-left: 1em;
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(129, 141, 202, 0.5);
+    padding: 10px 20px;
+}
+
+.main-navbar .logo img {
+    height: 40px;
+}
+
+/* Navbar list items */
+.main-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-navbar ul li {
+    margin: 0.7em;
+    padding-right: 0.5rem;
+}
+
+.main-navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-navbar ul li a:hover {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+
+/* Profile Image */
+.prof img {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+
+main{
+    flex-grow: 1;
+}
+/* Main Layout */
+#main-layout {
+
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://tse2.mm.bing.net/th?id=OIP.UFvARJApp-GYQLsf-mlXuAHaEO&pid=Api&P=0&h=180'); /* Add your background image */
+    background-size:cover;
+    background-position: center;
+    padding: 20px;
+}
+
+/* Dashboard Section */
+#dashboard {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+#dashboard h2 {
+    font-size: 2em;
+    color: #081d45;
+    margin-bottom: 20px;
+}
+
+#options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Option Cards */
+.option-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.option-icon {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.option-card h3 {
+    font-size: 1.5em;
+    color: #081d45;
+    margin-bottom: 10px;
+}
+
+.option-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #020a3a;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Footer Icons */
+.footer i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer i:hover {
+    color: #fff;
+}
+
+/* Footer Line */
+.footer hr {
+    border: 1px solid #444;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Footer Columns */
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.footer-columns .col {
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-columns ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-columns li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-columns li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns .col {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

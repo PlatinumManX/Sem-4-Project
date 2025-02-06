@@ -1,0 +1,270 @@
+/* General Body and Font */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(234, 239, 242, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Top Navbar (with phone and email) */
+.top-navbar {
+    background-color: rgb(8, 29, 69);
+    color: white;
+    text-align: end;
+    padding: 3px 20px;
+}
+
+.top-navbar .contact-info p {
+    margin: 5px;
+    font-size: 14px;
+    display: inline;
+    margin-left: 1em;
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Space between logo and nav items */
+    align-items: center;
+    /* Vertically align the logo and nav items */
+    background-color: rgba(124, 221, 95, 0.5);
+    padding: 10px 20px;
+}
+
+.main-navbar .logo img {
+    height: 40px;
+    /* Adjust logo size */
+}
+
+/* Navbar list items */
+.main-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; /* Removed padding-right to prevent unnecessary space */
+    display: flex;
+    justify-content: flex-end; /* Align the navigation items to the right */
+}
+
+.main-navbar ul li {
+    margin: 0.7em;
+    padding-right: 0.5rem;
+}
+
+.main-navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-navbar ul li a:hover {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+
+/* Profile Image */
+.prof img {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    /* Centering profile i*/
+}
+/* Main Content */
+main {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url(https://i.pinimg.com/originals/93/4c/85/934c8571ada4723a826036429d632359.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container for Sections */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    background: rgba(9, 106, 108, 0.8);
+    color: white;
+    padding: 15px;
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 2px solid rgba(9, 106, 108, 1);
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.section h3 {
+    margin-bottom: 10px;
+    color: rgba(9, 106, 108, 1);
+}
+
+/* Report Button */
+.report-btn {
+    background: #4cafaf;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.report-btn:hover {
+    background-color: rgba(9, 106, 108, 1);
+}
+
+/* Report Image */
+.report-image {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Information Section Styling */
+.info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info div {
+    width: 50%;
+    padding: 5px;
+}
+
+/* Search Bar Container */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Search Input */
+.search-input {
+    padding: 10px;
+    width: 70%;
+    border: 2px solid rgba(9, 106, 108, 1);
+    border-radius: 5px;
+}
+
+/* Search Button */
+.search-btn {
+    padding: 10px 15px;
+    background: rgba(9, 106, 108, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #020a3a;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Footer Header */
+.footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Footer Subheader */
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* Footer Icons */
+.footer i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer i:hover {
+    color: #fff;
+}
+
+/* Footer Line */
+.footer hr {
+    border: 1px solid #444;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Footer Columns */
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.footer-columns .col {
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-columns h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-columns ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-columns li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-columns li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns .col {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Search Bar for Mobile */
+    .search-input {
+        width: 90%;
+    }
+}
