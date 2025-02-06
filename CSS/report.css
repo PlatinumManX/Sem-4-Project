@@ -1,0 +1,245 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    color: #333;
+}
+
+/* Header Styling (Unchanged) */
+.top-navbar {
+    background-color: rgb(8, 29, 69);
+    color: white;
+    text-align: end;
+    padding: 3px 20px;
+}
+
+.top-navbar .contact-info p {
+    margin: 5px;
+    font-size: 14px;
+    display: inline;
+    margin-left: 1em;
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 151, 96);
+    padding: 10px 20px;
+}
+
+.main-navbar .logo img {
+    height: 40px;
+}
+
+.main-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-navbar ul li {
+    margin: 0.7em;
+    padding-right: 0.5rem;
+}
+
+.main-navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-navbar ul li a:hover {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+
+.prof img {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: rgb(8, 29, 69);
+    margin-bottom: 20px;
+}
+
+.report-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.report-btn {
+    padding: 10px 20px;
+    background-color: rgb(255, 151, 96);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.report-btn.active, .report-btn:hover {
+    background-color: rgb(8, 29, 69);
+}
+
+.report-fields {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+#patientBillId{
+    padding-right: 0;
+}
+
+.report-fields.active {
+    display: block;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.date-range {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: rgb(8, 29, 69);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.generate-btn:hover {
+    background-color: rgb(255, 151, 96);
+}
+
+/* Footer Styling (Unchanged) */
+.footer {
+    background-color: #020a3a;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.footer i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer i:hover {
+    color: #fff;
+}
+
+.footer hr {
+    border: 1px solid #444;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0;
+    position: relative;
+    left: 100px;
+}
+
+.footer-columns .col {
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-columns h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-columns ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-columns li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-columns li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns .col {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
