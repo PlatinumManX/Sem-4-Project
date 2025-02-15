@@ -6,7 +6,7 @@
     <title>Report Generation</title>
     <link rel="stylesheet" href="CSS/report.css">
 </head>
-<body>
+<body class="background">
     <header>
         <div class="top-navbar">
             <div class="contact-info">
@@ -16,11 +16,11 @@
         </div>
         <nav class="main-navbar">
             <span class="logo">
-                <img src="images/Logo.png" alt="HMS Logo">
+                <img src="IMAGES/Logo.png" alt="HMS Logo">
             </span>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="hms.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#">Contact</a></li>
                 <span class="prof">
                     <img src="IMAGES/sampleprofile.png" alt="Profile Photo">
@@ -31,21 +31,35 @@
     <div class="container">
         <h2>Generate Report</h2>
         <div class="report-buttons">
-            <button class="report-btn active" onclick="showReportFields('patientReport')">Patient Report</button>
+            <button class="report-btn active" onclick="showReportFields('patientReport')">Investigation Report</button>
             <button class="report-btn" onclick="showReportFields('appointmentReport')">Appointment Report</button>
             <button class="report-btn" onclick="showReportFields('billingReport')">Billing Report</button>
         </div>
 
         <div id="patientReport" class="report-fields active">
-            <h3>Patient Report</h3>
+            <h3>Investigation Report</h3>
             <label for="patientId">Patient ID:</label>
             <input type="text" id="patientId">
             <label for="patientName">Patient Name:</label>
             <input type="text" id="patientName">
-            <label for="diagnosis">Diagnosis:</label>
-            <input type="text" id="diagnosis">
             <label for="patientDate">Date:</label>
             <input type="date" id="patientDate">
+            <label for="diagnosis">RBC Count (in 10^6/uL):</label>
+            <input type="text" id="RBC Count">
+            <label for="patientId">Haemoglobin (in g/dl):</label>
+            <input type="text" id="Haemoglobin">
+            <label for="patientId">Platelet Count (in 10^3/uL):</label>
+            <input type="text" id="Platelet Count">
+            <label for="patientId">Neutrophils (in %):</label>
+            <input type="text" id="Neutrophils">
+            <label for="patientId">Lymphocytes (in %):</label>
+            <input type="text" id="Lymphocytes">
+            <label for="patientId">Monocytes (in %):</label>
+            <input type="text" id="Monocytes">
+            <label for="patientId">Eosinophils (in %):</label>
+            <input type="text" id="Eosinophils">
+            <label for="patientId">Basophils (in %):</label>
+            <input type="text" id="Basophils">
         </div>
 
         <div id="appointmentReport" class="report-fields">
