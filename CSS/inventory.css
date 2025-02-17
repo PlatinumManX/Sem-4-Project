@@ -4,26 +4,26 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    color: #333;
 }
 
 /* Top Navbar */
 .top-navbar {
     background: linear-gradient(135deg, #0e2153, #133775);
     color: white;
-    text-align: end;
     padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.top-navbar .contact-info p {
-    margin: 5px;
+.top-navbar .contact-info {
+    display: flex;
+    gap: 20px;
+}
+
+.top-navbar p {
+    margin: 0;
     font-size: 14px;
-    display: inline;
-    margin-left: 1em;
-}
-
-.top-navbar i {
-    margin-right: 5px;
 }
 
 /* Main Navbar */
@@ -39,17 +39,16 @@ body {
 .main-navbar .logo img {
     height: 40px;
 }
-
+.form-group{
+    color: white;
+}
 .main-navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: center;
-}
-
-.main-navbar ul li {
-    margin: 0 15px;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .main-navbar ul li a {
@@ -64,7 +63,7 @@ body {
     color: #0e2153;
 }
 
-.prof img {
+.main-navbar ul li.prof img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -73,26 +72,31 @@ body {
 
 /* Main Content */
 main {
-    background-image: url(https://www.echelonedge.com/wp-content/uploads/2023/05/Network-Inventory-Management-750x471.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    padding: 20px 0;
-}
+    padding: 20px;
+        background-image: url('https://static.vecteezy.com/system/resources/previews/004/987/898/original/doctor-in-medical-lab-coat-with-a-stethoscope-doctor-in-hospital-background-with-copy-space-low-poly-wireframe-vector.jpg'); /* Ensure correct relative path */
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; /* Prevents tiling */
+        padding: 20px 0;
+    }
+
 
 .container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-
+label{
+    margin-right: 1.5em;
+}
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #0e2153;
+    color: #cbe4f0;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -100,25 +104,24 @@ h1 {
 h2 {
     font-size: 1.75rem;
     font-weight: 600;
-    color: #133775;
+    color: #caf0f8;
     margin-bottom: 20px;
 }
 
 /* Dashboard Styles */
 .dashboard {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-bottom: 30px;
 }
 
 .card {
-    background: linear-gradient(135deg, #0e2153, #133775);
+    background: linear-gradient(135deg, #90e0ef, #0077b6);
     color: white;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    flex: 1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -137,39 +140,20 @@ h2 {
     font-weight: 700;
 }
 
-/* Form Styles */
-.form-group {
-    margin-bottom: 20px;
+/* Stock Management Form */
+#addStockForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
-
-.form-group label {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #555;
-    margin-bottom: 5px;
+.input{
+    border-radius: 4px;
+    size: 10em;
 }
-
-.form-group input,
-.form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    background: #f9f9f9;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-    border-color: #0e2153;
-    outline: none;
-}
-
-button {
-    width: 100%;
+#addStockForm button {
+    grid-column: span 2;
     padding: 12px;
-    background: linear-gradient(135deg, #0e2153, #133775);
+    background: linear-gradient(135deg, #0077b6, #caf0f8);
     color: white;
     border: none;
     border-radius: 10px;
@@ -179,22 +163,32 @@ button {
     transition: background 0.3s ease;
 }
 
-button:hover {
-    background: linear-gradient(135deg, #133775, #0e2153);
+#addStockForm button:hover {
+    background: linear-gradient(135deg, #caf0f8, #0077b6);
 }
 
 /* Search Section */
-#searchSuggestions {
-    list-style: none;
-    background: white;
-    position: absolute;
-    width: calc(100% - 20px);
+.search-section {
+    margin-bottom: 30px;
+}
+
+#searchItemName {
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+#searchSuggestions {
+    width: calc(100% - 20px);
+    margin-top: 5px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    list-style: none;
+    padding: 10px;
     display: none;
-    z-index: 10;
 }
 
 #searchSuggestions li {
@@ -217,7 +211,8 @@ button:hover {
 
 /* Inventory Categories */
 .categories {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-bottom: 30px;
 }
@@ -227,7 +222,6 @@ button:hover {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
