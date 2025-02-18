@@ -25,6 +25,7 @@ document.getElementById("addStockForm").addEventListener("submit", function(even
         expiry: document.getElementById("itemExpiry").value,
         supplier: document.getElementById("itemSupplier").value
     };
+    inventory.splice(0,inventory.length);
     inventory.push(item);
     alert("Stock Added!");
     displayCategories();
