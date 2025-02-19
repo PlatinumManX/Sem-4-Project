@@ -133,9 +133,10 @@ body.bg {
 .form button {
     height: 55px;
     width: 100%;
-    color: #0e0d0d;
-    background-color: aquamarine;
+    color: aliceblue;
+    background-color: rgba(30, 116, 173, 0.993);
     font-size: 1rem;
+    /* font: bolder; */
     font-weight: 400;
     margin-top: 30px;
     border: none;
@@ -144,8 +145,12 @@ body.bg {
 }
 
 .form button:hover {
-    background: rgb(56, 92, 250);
-    color: #fff;
+    /* font: bolder; */
+    text-decoration: underline;
+    /* font: large; */
+    background: #63c501;
+    border-radius: 10px;
+    color: #075600;
 }
 
 /*Responsive*/
