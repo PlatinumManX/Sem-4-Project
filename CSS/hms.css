@@ -107,7 +107,55 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+/* Stylish Quote Container */
+.quote-container {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255,0.4); /* Semi-transparent white background */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1.5s ease-out;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
 
+.quote-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #002439;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Animation for the quote */
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design for Quote */
+@media (max-width: 768px) {
+    .quote-container {
+        width: 80%;
+        left: 5%;
+        top: 20%;
+    }
+
+    .quote-text {
+        font-size: 1.2rem;
+    }
+}
 /* Card Styling */
 .card {
     background: rgba(255, 255, 255, 0.4);
@@ -117,7 +165,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 350px;
+    min-width: 350px;
     /* Increased card width */
     max-height: fit-content;
     margin-top: 8%;
