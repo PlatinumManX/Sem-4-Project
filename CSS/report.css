@@ -5,14 +5,6 @@ body {
     color: #333;
 }
 
-body.background {
-    background-image: url('../IMAGES/reportbg.jpg'); /* Replace with your image path */
-    background-size: cover; /* Scale the image to cover the entire screen */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent tiling */
-    min-height: 100vh; /* Ensure the body takes up full viewport height */
-}
-/* Header Styling (Unchanged) */
 .top-navbar {
     background-color: rgb(8, 29, 69);
     color: white;
@@ -31,9 +23,7 @@ body.background {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: rgb(255, 151, 96); */
-    /* background-color: #8ecae6; */
-    background-color: rgb(255, 255, 255,0.3);
+    background-color: rgb(255, 151, 96);
     padding: 10px 20px;
 }
 
@@ -75,28 +65,13 @@ body.background {
     border-radius: 50%;
 }
 
-/* Container Styling */
 .container {
     max-width: 800px;
     margin: 20px auto;
-    /* background: white; */
-    background-color: rgb(255, 255, 255,0.3);
+    background: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.container h2{
-    border: 2px solid black;
-    margin-left: 35%;
-    margin-right: 35%;
-    align-items: center;
-    border-radius: 5px;
-    background-color: rgb(240, 248, 255,0.6);
-}
-
-#patientReport{
-    background-color: rgb(255, 255, 255,0.6);
 }
 
 h2 {
@@ -114,12 +89,9 @@ h2 {
 
 .report-btn {
     padding: 10px 20px;
-    /* background-color: rgb(255, 151, 96); */
-    background-color: #8ecae6;
-    border: 1px solid rgb(0, 0, 0);
-    /* color: white; */
-    color: black;
-    /* border: none; */
+    background-color: rgb(255, 151, 96);
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
@@ -128,7 +100,6 @@ h2 {
 
 .report-btn.active, .report-btn:hover {
     background-color: rgb(8, 29, 69);
-    color: aliceblue;
 }
 
 .report-fields {
@@ -138,10 +109,6 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 5px;
     background: #f9f9f9;
-}
-
-#patientBillId{
-    padding-right: 0;
 }
 
 .report-fields.active {
@@ -155,19 +122,13 @@ label {
     color: #555;
 }
 
-input, select {
+input, select, textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-}
-
-.date-range {
-    display: flex;
-    gap: 10px;
-    align-items: center;
 }
 
 .generate-btn {
@@ -184,40 +145,15 @@ input, select {
 }
 
 .generate-btn:hover {
-    /* background-color: rgb(255, 151, 96); */
-    background-color: #8ecae6;
-
+    background-color: rgb(255, 151, 96);
 }
 
-/* Footer Styling (Unchanged) */
 .footer {
     background-color: #020a3a;
     color: white;
     padding: 40px 0;
     text-align: center;
     width: 100%;
-}
-
-.footer h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.footer h4 {
-    font-size: 16px;
-    margin-bottom: 20px;
-    font-weight: normal;
-}
-
-.footer i {
-    font-size: 24px;
-    margin: 0 10px;
-    color: #bbb;
-    transition: color 0.3s ease;
-}
-
-.footer i:hover {
-    color: #fff;
 }
 
 .footer hr {
@@ -231,19 +167,12 @@ input, select {
     justify-content: space-around;
     align-items: flex-start;
     padding: 20px 0;
-    position: relative;
-    left: 100px;
 }
 
 .footer-columns .col {
     flex: 1;
     max-width: 300px;
     text-align: left;
-}
-
-.footer-columns h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
 }
 
 .footer-columns ul {
@@ -254,11 +183,6 @@ input, select {
 .footer-columns li {
     margin-bottom: 10px;
     font-size: 14px;
-}
-
-.footer-columns li:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 @media (max-width: 768px) {
