@@ -1,0 +1,336 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Background for the Body */
+main.background {
+    background-image: url('../IMAGES/dmg.jpg'); /* Replace with your image path */
+    background-size: cover; /* Scale the image to cover the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    min-height: 100vh; /* Ensure the body takes up full viewport height */
+}
+
+/* Top Navbar (with phone and email) */
+.top-navbar {
+    background-color: rgb(8, 29, 69);
+    color: white;
+    text-align: end;
+    padding: 0.5em 1.5em; /* Relative padding */
+}
+
+.top-navbar .contact-info p {
+    margin: 0.5em;
+    font-size: 0.875rem; /* Relative font size */
+    display: inline;
+    margin-left: 1em;
+}
+
+/* Main Navbar Styling */
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 151, 96);
+    padding: 0.625em 1.25em; /* Relative padding */
+}
+
+.main-navbar .logo img {
+    height: 2.5em; /* Relative height */
+}
+
+/* Navbar list items */
+.main-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-navbar ul li {
+    margin: 0.7em;
+    padding-right: 0.5em;
+}
+
+.main-navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem; /* Relative font size */
+    display: flex;
+    justify-content: center;
+}
+
+.main-navbar ul li a:hover {
+    background-color: white;
+    padding: 0.3125em;
+    border-radius: 0.625em;
+    transition-duration: 0.5s;
+}
+
+/* Profile Image */
+.prof img {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+
+/* Main Content Layout */
+main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.sidebar {
+    width: 18em; /* Fixed width for sidebar */
+    min-width: fit-content;
+    background-color: #1e3a5f;
+    background-image: url('../Images/sidebar.png');
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    min-height: 100%;
+    /* background-repeat: repeat; */
+}
+
+.pm {
+    margin: 0;
+    padding: 1em;
+    font-size: 1.5rem; /* Relative font size */
+    margin-bottom: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown {
+    margin-bottom: 1em;
+    transition: ease-in-out 1s;
+}
+
+.drop-btn {
+    background-color: #56a4ed;
+    color: aliceblue;
+    padding: 0.5em;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem; /* Relative font size */
+    border-radius: 0.3125em;
+}
+
+.drop-content {
+    display: none;
+    padding: 0;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 5s ease-in-out;
+}
+
+.drop-content a {
+    background-color: #0f3057;
+    color: aliceblue;
+    padding: 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.drop-content a:hover {
+    background-color: #4d5152;
+}
+
+.dropdown:hover .drop-content {
+    opacity: 1;
+    height: auto;
+}
+
+#content {
+    flex-grow: 1;
+    padding: 1em;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#patient-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 1em; /* Add gap between items */
+}
+
+/* Profile Details Container */
+.profile-details-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    background-color: rgba(9, 106, 108, 0.2);
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.profile-photo-box img {
+    width: 10em; /* Relative width */
+    height: 10em; /* Relative height */
+    border-radius: 50%;
+}
+
+.info-box {
+    background-color: #f9f9f9;
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 0.3125em;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
+}
+
+.prescription-box {
+    background-color: rgba(9, 106, 108, 0.2);
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 0.3125em;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
+}
+
+#prescription-link, #report-link {
+    color: darkblue;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+}
+
+#prescription-link:hover, #report-link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-navbar ul li {
+        margin: 0.5em 0;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    #patient-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-details-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.info-box{
+    background-color: aliceblue;
+}
+
+.footer {
+    background-color: #020a3a;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.footer i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer i:hover {
+    color: #fff;
+}
+
+.footer hr {
+    border: 1px solid #444;
+    margin: 20px auto;
+    width: 80%;
+}
+
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0;
+    position: relative;
+    left: 100px;
+}
+
+.footer-columns .col {
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-columns h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-columns ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-columns li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-columns li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns .col {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

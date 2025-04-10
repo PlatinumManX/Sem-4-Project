@@ -1,0 +1,360 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+/* Background for the Body */
+#background {
+    background-image: url('../IMAGES/aboutbg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Top Navbar */
+.top-navbar {
+    background-color: rgb(8, 29, 69);
+    color: white;
+    text-align: end;
+    padding: 10px 20px;
+}
+
+.top-navbar .contact-info p {
+    margin: 5px;
+    font-size: 14px;
+    display: inline;
+    margin-left: 1em;
+}
+
+/* Main Navbar */
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(161, 200, 243);
+    padding: 10px 20px;
+}
+
+.main-navbar .logo img {
+    height: 40px;
+}
+
+.main-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-navbar ul li {
+    margin: 0 10px;
+}
+
+.main-navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.main-navbar ul li a:hover {
+    background-color: white;
+}
+
+.prof img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* About Section */
+#bgname {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#aim {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+#vision, #mission {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgb(4, 1, 79);
+    border-radius: 15px;
+    padding: 20px;
+    width: 45%;
+    max-width: 400px;
+    text-align: center;
+}
+
+#hvision, #hmission {
+    font-size: 24px;
+    color: rgb(4, 1, 79);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#visioncontent, #missioncontent {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Cards Section */
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px; /* Increased gap for more spacing */
+    padding: 40px; /* Increased padding */
+    justify-content: center;
+    /* max-width: 1400px; Wider container */
+    margin: 0 20px; /* Center the container */
+}
+
+.card {
+    max-width: 320px;
+    width: 100%; /* Full width of the grid cell */
+    height: 400px; /* Increased height for bigger cards */
+    perspective: 1500px;
+    border-radius: 15px;
+    /* overflow: hidden; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* transition: transform 0.5s, box-shadow 0.5s; */
+    position: relative;
+    margin: 0 auto;
+    animation: glow 2s infinite;
+    /* border: 2px solid transparent; Add border for glow effect */
+}
+
+@keyframes glow{
+    0% {
+        box-shadow: 0 0 15px rgba(32, 74, 201, 0.5), 0 0 30px rgba(32, 201, 151, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(32, 83, 201, 0.8), 0 0 60px rgba(32, 201, 151, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(43, 32, 201, 0.5), 0 0 30px rgba(32, 201, 151, 0.5);
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(81, 203, 238, 0.8), 0 0 40px rgba(81, 203, 238, 0.6); /* Glow effect */
+    border-color: rgba(81, 203, 238, 0.5); /* Border glow color */
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+}
+
+.card:hover .content {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-start; Align content to the top */
+    /* align-items: center; */
+    /* text-align: center; */
+    /* box-sizing: border-box; Ensure padding is included in width/height */
+}
+
+.front {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0; Remove padding to allow image to fill the entire front */
+}
+
+.back {
+    background-color: #5a79e9; /* Color of the back */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    padding: 20px;
+    max-height: 22.5em;
+    max-width: 17.5em;
+    color: white;
+}
+
+.image {
+    width: 100%; /* Full width of the card */
+    height: 100%; /* Full height of the card */
+    object-fit: cover; /* Ensures the image covers the area */
+    border-radius: 15px; /* Rounded corners for the entire image */
+}
+
+.badge {
+    background-color: #d8ddf5;
+    color: #050505;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 24px; /* Bigger font size */
+    margin-bottom: 10px;
+}
+
+.ex {
+    /* margin-left: 0; Remove unnecessary margin */
+    font-size: 14px;
+    text-align: left; /* Align text to the left */
+    padding: 0 10px; /* Add padding to prevent overflow */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #card-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 card per row on mobile */
+    }
+
+    .card {
+        height: 450px; /* Slightly smaller height for mobile */
+    }
+
+    #aim {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #vision, #mission {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-navbar ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .main-navbar ul li {
+        margin: 5px 0;
+    }
+
+    #bgname {
+        width: 100%;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #020a3a;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.footer i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer i:hover {
+    color: #fff;
+}
+
+.footer hr {
+    border: 1px solid #444;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0;
+    position: relative;
+    left: 100px;
+}
+
+.footer-columns .col {
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-columns h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-columns ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-columns li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-columns li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns .col {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
